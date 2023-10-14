@@ -2,7 +2,7 @@ from pathlib import Path
 import scrapy
 
 class CitasSpider(scrapy.Spider):
-    nombre = 'citas'
+    name = 'citas'
     # el nombre identifica la Araña. Debe ser único dentro de un proyecto, es decir, no se puede establecer
     # el mismo nombre para diferentes Spiders
 
@@ -18,4 +18,4 @@ class CitasSpider(scrapy.Spider):
         page = response.url.split('/')[-2]
         filename = f"Citas-{page}.html"
         Path(filename).write_bytes(response.body)
-        self.log(f'Archivo guardado {filenamename}')
+        self.log(f'Archivo guardado {filename}')
