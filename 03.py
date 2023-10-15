@@ -38,7 +38,7 @@ class QuotesSpider(scrapy.Spider):
         # Extraer datos de las paginas siguientes:
         next_page = response.css("li.next a::attr(href)").get()
         if next_page is not None:
-            next_page = response.urljoin(next_page)
+            next_page = response.urljoin(next_page) # se crea el enlace de la pagina siguiente y la solucitud
             yield scrapy.Request(next_page, callback=self.parse)
 
 
