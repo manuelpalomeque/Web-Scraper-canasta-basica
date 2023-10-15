@@ -7,9 +7,9 @@ import scrapy
 
 #2- Crear la clase para exrtraer los datos
 class CitasSpider(scrapy.Spider):
-    name = "quotes"
+    name = "quotes" # name debe estar en ingles
     # defino las urls donde quiere trabajar:
-    webAnalisis = [
+    start_urls  = [ #start_urls  debe estar en ingles
         "https://quotes.toscrape.com/tag/humor/",
     ]
     # Funcion Parse para  obtener la respuesta como argumento:
@@ -28,3 +28,5 @@ class CitasSpider(scrapy.Spider):
 # Ejecutar desde cmd, usando el runspider comando:
 # scrapy runspider 01.py -o citas.json
 # se guarda un json con los datos extraidos
+# Se intento guardar como .txt pero no funciona
+# Sis e puede fuardar como .csv
