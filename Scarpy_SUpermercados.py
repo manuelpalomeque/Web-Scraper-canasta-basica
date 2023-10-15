@@ -60,15 +60,31 @@ class ProductosSpider(scrapy.Spider):
         # "https://www.hiperlibertad.com.ar/cafe-molido-bonafide-sensaciones-torrado-suave-500-gr/p",
         #"https://www.hiperlibertad.com.ar/yerba-playadito-suave-bcp-1kg/p",
     ]
+    # Este parse no funciono porque tenia mal  la etiqueta del nombre y porque el producto lo tenia configurado como si
+    # buscara por varias paginas, pero al final le di las paginas puntuales donde buscar, pero lo dejo para comprender el
+    # error:
+    # def parse(self, response):
+    #     for span in response.css("div.pr0 items-stretch vtex-flex-layout-0-x-stretchChildrenWidth flex"):
+    #         yield {
+    #             "fecha": fechaActual,
+    #             "hora": horaActual,
+    #             #"pagina": response.css("li.next a::attr(href)").get(),
+    #             "Producto": response.css("span.vtex-store-components-3-x-productBrand::text").get(),
+    #         }
+
 
     def parse(self, response):
-        for span in response.css("div.pr0 items-stretch vtex-flex-layout-0-x-stretchChildrenWidth flex"):
-            yield {
-                "fecha": fechaActual,
-                "hora": horaActual,
-                "pagina": response.css("li.next a::attr(href)").get(),
-                "Producto": span.css("span.vtex-store-components-3-x-productBrand vtex-store-components-3-x-productBrand--pdp-product-name::text").get(),
-            }
+        # Utilizando expresiones CSS
+        nombre_producto = response.css('span.vtex-store-components-3-x-productBrand::text').get()
+        #precio_producto = response.css("::text").get() FALTA CONFIGURAR LA ETIQUETA DEL PRECIO
+        yield {
+            "fecha": fechaActual,
+            "hora": horaActual,
+            "Nombre Producto": nombre_producto,
+            #"Precio": precio_producto
+            "pagina": ProductosSpider.start_urls,
+        }
+
 
 # Extrer los datos:
 # scrapy runspider Scarpy_SUpermercados.py -o productos.csv
