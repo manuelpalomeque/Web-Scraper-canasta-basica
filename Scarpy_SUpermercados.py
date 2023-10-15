@@ -79,12 +79,18 @@ class ProductosSpider(scrapy.Spider):
     def parse(self, response):
         # Utilizando expresiones CSS
         nombre_producto = response.css('span.vtex-store-components-3-x-productBrand::text').get()
-        #precio_producto = response.css("::text").get() FALTA CONFIGURAR LA ETIQUETA DEL PRECIO
+        # El precio esta dividido en 3 span diferentes (miles, cientos, centavos)
+        precio_producto_miles = response.css("span.vtex-product-price-1-x-currencyInteger::text").get()
+        precio_producto_cientos = response.css("span.vtex-product-price-1-x-currencyInteger::text").get()
+        precio_producto_decimales =  response.css("span.vtex-product-price-1-x-currencyFraction::text").get()
+
         yield {
             "fecha": fechaActual,
             "hora": horaActual,
             "Nombre Producto": nombre_producto,
-            #"Precio": precio_producto
+            # El precio esta dividido en 3 span diferentes (miles, cientos, centavos), por eso los contateno:
+            "Precio": f"{precio_producto_miles}.{precio_producto_cientos},{precio_producto_decimales}"
+            # No logro diferenciar los divs de miles de lo que corresponde a los cientos
             #"pagina": ProductosSpider.start_urls,  ME TRAE EL LISTADO COMPLETO DE PAGINAS NO LA QUE USA EN EL MOMENTO
         }
 
