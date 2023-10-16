@@ -82,7 +82,9 @@ class ProductosSpider(scrapy.Spider):
         precio_producto_miles = response.css("span.vtex-product-price-1-x-currencyInteger::text").getall()
         #precio_producto_cientos = response.css("span.vtex-product-price-1-x-currencyInteger::text").get()
         precio_producto_decimales =  response.css("span.vtex-product-price-1-x-currencyFraction::text").get()
-        if len(precio_producto_miles[0])> 1:
+        if len(precio_producto_miles) == 1:
+            precio = precio_producto_miles
+        elif len(precio_producto_miles[0])> 1:
             precio = precio_producto_miles[1]
         else:
             precio = f'{precio_producto_miles[0]}.{precio_producto_miles[1]}'
@@ -96,7 +98,6 @@ class ProductosSpider(scrapy.Spider):
             # No logro diferenciar los divs de miles de lo que corresponde a los cientos
             #"pagina": ProductosSpider.start_urls,  ME TRAE EL LISTADO COMPLETO DE PAGINAS NO LA QUE USA EN EL MOMENTO
         }
-
 
 # 06 - Extrer los datos:
 # En la terminal, sobre la carpeta en la que esta guardado el codigo, hay que ejecutar el siguiente comando:
