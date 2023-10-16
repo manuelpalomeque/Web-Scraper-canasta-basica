@@ -40,7 +40,7 @@ class ProductosSpider(scrapy.Spider):
         "https://www.hiperlibertad.com.ar/arvejas-montenevi-x-340-gr/p",
         "https://www.hiperlibertad.com.ar/acelga-congelada-green-life-500-g/p",
         "https://www.hiperlibertad.com.ar/cebolla-x-500-g/p",
-        "https://www.hiperlibertad.com.ar/lechuga-arrepollada-x-500g/p",
+        "https://www.hiperlibertad.com.ar/bandeja-lechuga-mantecosa-lavada-sue-o-verde-x-200-gr/p",
         "https://www.hiperlibertad.com.ar/tomate-perita-x-500g/p",
         "https://www.hiperlibertad.com.ar/calabacin-anquito-fraccionado-x-700gr-1-2-calabacin/p",
         "https://www.hiperlibertad.com.ar/mandarina-x-1kg/p",
@@ -83,11 +83,11 @@ class ProductosSpider(scrapy.Spider):
         #precio_producto_cientos = response.css("span.vtex-product-price-1-x-currencyInteger::text").get()
         precio_producto_decimales =  response.css("span.vtex-product-price-1-x-currencyFraction::text").get()
         if len(precio_producto_miles) == 1:
-            precio = precio_producto_miles
+            precio = precio_producto_miles # cuando el producto vale cientos
         elif len(precio_producto_miles[0])> 1:
-            precio = precio_producto_miles[1]
+            precio = precio_producto_miles[1] # cuando el producto tiene un precio anterior, enfatizando una oferta
         else:
-            precio = f'{precio_producto_miles[0]}.{precio_producto_miles[1]}'
+            precio = f'{precio_producto_miles[0]}.{precio_producto_miles[1]}' # cuando vale miles y cientos
         yield {
             "fecha": fechaActual,
             "hora": horaActual,
