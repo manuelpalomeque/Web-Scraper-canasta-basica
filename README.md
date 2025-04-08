@@ -34,3 +34,92 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 │   └── dashboard_precios.pdf
 ├── requirements.txt
 └── README.md
+
+---
+
+
+🧰 Tecnologías utilizadas
+Lenguaje: Python 3.10
+
+Scraping: requests, BeautifulSoup, Selenium
+
+Procesamiento de datos: pandas, numpy
+
+Visualización: matplotlib, seaborn, plotly, Power BI
+
+Automatización (a futuro): cron, Airflow o Prefect
+
+Versionado de código: Git
+
+📤 Fuentes de datos
+Los datos fueron extraídos de las siguientes cadenas de supermercados:
+
+Carrefour Argentina – https://www.carrefour.com.ar/
+
+Disco – https://www.disco.com.ar/
+
+Vea – https://www.vea.com.ar/
+
+Cordiez – https://www.cordiez.com.ar/
+
+⚠️ Importante: Este proyecto tiene fines educativos y no persigue fines comerciales. Se respetan los términos de uso de cada sitio web.
+
+⚙️ Instrucciones para ejecutar el scraper
+Clonar el repositorio:
+
+bash
+Copiar
+Editar
+git clone https://github.com/tu_usuario/canasta-basica-cba.git
+cd canasta-basica-cba
+Instalar dependencias:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+Ejecutar el scraper para una cadena específica:
+
+bash
+Copiar
+Editar
+python scraper/carrefour.py
+📊 Análisis y visualizaciones
+Los notebooks dentro de /notebooks contienen el análisis exploratorio y los modelos predictivos de tendencia de precios.
+
+Se incluyen visualizaciones de:
+
+Evolución de precios por producto y categoría.
+
+Comparación entre cadenas de supermercados.
+
+Productos con mayor aumento o baja en el período.
+
+📁 Ver carpeta visualizaciones/ para resultados gráficos y dashboards.
+
+🧠 Hallazgos clave
+Los productos de limpieza y lácteos presentan mayor volatilidad de precios.
+
+Algunos supermercados aplican aumentos similares a intervalos regulares.
+
+Se detectaron diferencias de hasta un 40% en productos equivalentes entre cadenas.
+
+📝 Contribuciones y mejoras
+Este proyecto está en desarrollo. Se planea:
+
+Incorporar nuevos supermercados.
+
+Mejorar la automatización con pipelines programados.
+
+Publicar un dashboard online en Power BI o Streamlit.
+
+Contribuciones son bienvenidas. Podés abrir un issue o hacer un pull request.
+
+🧑 Autor
+Jonathan Manuel Palomeque
+Estudiante de Ciencia de Datos e Inteligencia Artificial
+LinkedIn: [tu_linkedin]
+GitHub: [tu_usuario]
+
+📄 Licencia
+Este proyecto está bajo la Licencia MIT.
