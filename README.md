@@ -1,4 +1,14 @@
 # 🛒 Evolución de la Canasta Básica en Córdoba, Argentina
+---
+
+## 🧑 Autor
+* Jonathan Manuel Palomeque
+* Estudiante de Ciencia de Datos e Inteligencia Artificial
+* LinkedIn: [jonathan-palomeque](https://www.linkedin.com/in/jonathan-palomeque/)
+* GitHub: [manuelpalomeque](https://github.com/manuelpalomeque)
+---
+
+## Descripción
 
 Este proyecto analiza la evolución de precios de productos de la canasta básica relevados directamente de sitios web de supermercados de Córdoba (Argentina) mediante técnicas de web scraping.
 
@@ -110,14 +120,6 @@ Este proyecto está en desarrollo. Se planea:
 * Publicar un dashboard online en Power BI o Streamlit.
 * 
 Contribuciones son bienvenidas. Podés abrir un issue o hacer un pull request.
-
----
-
-## 🧑 Autor
-* Jonathan Manuel Palomeque
-* Estudiante de Ciencia de Datos e Inteligencia Artificial
-* LinkedIn: [jonathan-palomeque](https://www.linkedin.com/in/jonathan-palomeque/)
-* GitHub: [manuelpalomeque](https://github.com/manuelpalomeque)
 
 ---
 
