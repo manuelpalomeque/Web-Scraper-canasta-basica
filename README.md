@@ -31,9 +31,9 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 ```bash
 📁 canasta-basica-cba/
 ├── scraper/
-│   ├── carrefour.py
+│   ├── hiper_libertad.py
 │   ├── disco.py
-│   └── supermercados_utils.py
+│   └── carrefour.py
 ├── data/
 │   ├── precios_crudos/
 │   └── precios_limpios/
