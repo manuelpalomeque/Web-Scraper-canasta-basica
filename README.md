@@ -42,6 +42,7 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 │   └── 02_modelo_tendencias.ipynb
 ├── visualizaciones/
 │   └── dashboard_precios.pdf
+├── Canasta Básica Alimentaria.png
 ├── requirements.txt
 └── README.md
 ```
