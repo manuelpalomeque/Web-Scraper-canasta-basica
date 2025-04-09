@@ -52,6 +52,7 @@ Lenguaje: Python 3.10
 ## 📤 Fuentes de datos
 Los datos fueron extraídos de las siguientes cadenas de supermercados:
 
+* Hiper Libertad – https://www.hiperlibertad.com.ar/
 * Carrefour Argentina – https://www.carrefour.com.ar/
 * Disco – https://www.disco.com.ar/
 * Vea – https://www.vea.com.ar/
