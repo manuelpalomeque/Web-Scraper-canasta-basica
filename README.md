@@ -10,7 +10,7 @@
 
 ## Descripción
 
-Este proyecto analiza la evolución de precios de productos de la [canasta básica](https://www.indec.gob.ar/ftp/cuadros/sociedad/EPH_metodologia_22_pobreza.pdf) relevados directamente de sitios web de supermercados de Córdoba (Argentina) durante el 2025, mediante técnicas de web scraping.
+Este proyecto analiza la evolución de precios de productos de la [canasta básica](https://www.indec.gob.ar/ftp/cuadros/sociedad/preguntas_frecuentes_cba_cbt.pdf) relevados directamente de sitios web de supermercados de Córdoba (Argentina) durante el 2025, mediante técnicas de web scraping.
 
 El objetivo es generar una herramienta automatizada que permita observar y visualizar variaciones de precios entre cadenas, categorías de productos y momentos del tiempo, contribuyendo a una mayor transparencia y análisis económico-social.
 
