@@ -1,12 +1,15 @@
-# Para este proyecto, busco extraer los datos del producto y del precio del mismo de la pagina web de Hiper Libertad:
-# https://www.hiperlibertad.com.ar/
 
 # 01 - Importo librerias necesarias:
 import scrapy
+from scrapy.cmdline import execute
 from datetime import datetime
+import pytz
+
 
 # 02-  Configuro el la fecha actual:
-hora = datetime.now().time()
+zona_arg = pytz.timezone('America/Argentina/Buenos_Aires')
+
+hora = datetime.now(zona_arg).time()
 fecha = datetime.now().today()
 
 #03- Formato correcto para la fecha y hora:
@@ -17,12 +20,11 @@ horaActual = hora.strftime(fHoraMinuto)
 fechaActual = fecha.strftime(fDiaMesAño)
 
 # prueba de resultado:
-# print(f'''
-# La fecha actual es: {fechaActual}
-# La hora actual es: {horaActual}''')
+#print(f'''
+#La fecha actual es: {fechaActual}
+#La hora actual es: {horaActual}''')
 
 # 04 - Configuro la araña:
-
 class ProductosSpider(scrapy.Spider):
     name = 'Canasta'
     start_urls = [
@@ -60,45 +62,29 @@ class ProductosSpider(scrapy.Spider):
         "https://www.hiperlibertad.com.ar/yerba-playadito-suave-bcp-1kg/p",
     ]
 
-
-    # 05 - Configuro la funcion Parse:
-
-    # Este parse no funciono porque tenia mal  la etiqueta del nombre y porque el producto lo tenia configurado como si
-    # buscara por varias paginas, pero al final le di las paginas puntuales donde buscar, pero lo dejo para comprender el
-    # error:
-    # def parse(self, response):
-    #     for span in response.css("div.pr0 items-stretch vtex-flex-layout-0-x-stretchChildrenWidth flex"):
-    #         yield {
-    #             "fecha": fechaActual,
-    #             "hora": horaActual,
-    #             #"pagina": response.css("li.next a::attr(href)").get(),
-    #             "Producto": response.css("span.vtex-store-components-3-x-productBrand::text").get(),
-    #         }
+# 05 - Configuro la funcion Parse:
 
     def parse(self, response):
-        # Utilizando expresiones CSS
-        nombre_producto = response.css('span.vtex-store-components-3-x-productBrand::text').get()
-        # El precio esta dividido en 3 span diferentes (miles, cientos, centavos)
-        precio_producto_miles = response.css("span.vtex-product-price-1-x-currencyInteger::text").getall()
-        #precio_producto_cientos = response.css("span.vtex-product-price-1-x-currencyInteger::text").get()
-        precio_producto_decimales =  response.css("span.vtex-product-price-1-x-currencyFraction::text").get()
-        if len(precio_producto_miles) == 1:
-            precio = precio_producto_miles # cuando el producto vale cientos
-        elif len(precio_producto_miles[0])> 1:
-            precio = precio_producto_miles[1] # cuando el producto tiene un precio anterior, enfatizando una oferta
-        else:
-            precio = f'{precio_producto_miles[0]}.{precio_producto_miles[1]}' # cuando vale miles y cientos
-        yield {
-            "fecha": fechaActual,
-            "hora": horaActual,
-            "Nombre Producto": nombre_producto,
-            # El precio esta dividido en 3 span diferentes (miles, cientos, centavos), por eso los contateno:
-            "Precio": precio,
-            #"Precio": f"{precio},{precio_producto_decimales}"
-            # No logro diferenciar los divs de miles de lo que corresponde a los cientos
-            #"pagina": ProductosSpider.start_urls,  ME TRAE EL LISTADO COMPLETO DE PAGINAS NO LA QUE USA EN EL MOMENTO
-        }
+            nombre_producto = response.css('span.vtex-store-components-3-x-productBrand::text').get()
 
-# 06 - Extrer los datos:
-# En la terminal, sobre la carpeta en la que esta guardado el codigo, hay que ejecutar el siguiente comando:
-# scrapy runspider Scarpy_SUpermercados.py -o productos.csv
+            # El precio esta dividido en 2 span diferentes (enteros y decimales)
+            precio_entero = response.css("span.vtex-product-price-1-x-currencyInteger::text").getall()
+            precio_decimales =  response.css("span.vtex-product-price-1-x-currencyFraction::text").get()
+
+            if precio_entero: # Si tiene un precio configurado
+              if len(precio_entero) == 1:  # Tiene solamente un preciosin ofertas
+                precio = f'{precio_entero[0]}, {precio_decimales}'
+              elif len(precio_entero[0])> 1: # cuando el producto tiene un precio anterior, enfatizando una oferta
+                precio = f'{precio_entero[1]}, {precio_decimales[1]}'  # Se toma el segundo valor, que es el precio real sin promocion.
+              else:
+                precio = f'{precio_entero[0]}.{precio_entero[1]}, {precio_decimales}' # cuando tiene entero y decimales
+            else: # Si no tiene un precion configurado
+              precio = "No disponible"
+
+            yield {
+                "fecha": fechaActual,
+                "hora": horaActual,
+                "Nombre Producto": nombre_producto,
+                "Precio": precio,
+                "URL": response.url
+            }
