@@ -35,9 +35,11 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 │   ├── disco.py
 │   └── carrefour.py
 ├── data/
+│   ├── relevamiento_precios_hiper_libertad.csv
 │   ├── precios_crudos/
 │   └── precios_limpios/
 ├── notebooks/
+│   ├── hiper_libertad.ipynb 
 │   ├── 01_eda.ipynb
 │   └── 02_modelo_tendencias.ipynb
 ├── visualizaciones/
