@@ -32,14 +32,14 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 📁 canasta-basica-cba/
 ├── scraper/
 │   ├── hiper_libertad.py
-│   ├── disco.py
-│   └── carrefour.py
+│   └── disco.py
 ├── data/
 │   ├── relevamiento_precios_hiper_libertad.csv
-│   ├── precios_crudos/
+│   ├── relevamiento_precios_disco.csv
 │   └── precios_limpios/
 ├── notebooks/
-│   ├── hiper_libertad.ipynb 
+│   ├── hiper_libertad.ipynb
+|   |── disco.ipynb 
 │   ├── 01_eda.ipynb
 │   └── 02_modelo_tendencias.ipynb
 ├── visualizaciones/
@@ -67,10 +67,7 @@ Lenguaje: Python 3.10
 Los datos fueron extraídos de las siguientes cadenas de supermercados:
 
 * Hiper Libertad – https://www.hiperlibertad.com.ar/
-* Carrefour Argentina – https://www.carrefour.com.ar/
 * Disco – https://www.disco.com.ar/
-* Vea – https://www.vea.com.ar/
-* Cordiez – https://www.cordiez.com.ar/
 
 ⚠️ Importante: Este proyecto tiene fines educativos y no persigue fines comerciales. Se respetan los términos de uso de cada sitio web.
 
