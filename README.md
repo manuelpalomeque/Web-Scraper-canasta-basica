@@ -45,7 +45,7 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 ├── visualizaciones/
 │   └── dashboard_precios.pdf
 ├── Canasta Básica Alimentaria.png
-├── Relevamiento de productos- Enlaces.pdf
+├── Relevamiento de productos- Enlaces usados.pdf
 ├── requirements.txt
 └── README.md
 ```
