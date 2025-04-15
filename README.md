@@ -55,9 +55,9 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 ## 🧰 Tecnologías utilizadas
 Lenguaje: Python 3.10
 
-* Scraping: requests, BeautifulSoup, Selenium
-* Procesamiento de datos: pandas, numpy
-* Visualización: matplotlib, seaborn, plotly, Power BI
+* Scraping: BeautifulSoup
+* Procesamiento de datos: pandas
+* Visualización: matplotlib
 * Automatización (a futuro): cron, Airflow o Prefect
 * Versionado de código: Git
 
