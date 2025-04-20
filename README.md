@@ -49,10 +49,10 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 ---
 
 ## 🧰 Tecnologías utilizadas
-Lenguaje: Python 3.10
-Notebook: Colab
+* Lenguaje: Python 3.10
+* Notebook: Colab
 
-* Scraping: BeautifulSoup
+* Scraping: Scrapy y datetime 
 * Procesamiento de datos: Pandas
 * Visualización: Matplotlib  y Seaborn
 
