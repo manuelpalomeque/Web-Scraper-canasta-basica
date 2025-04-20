@@ -78,6 +78,8 @@ Se incluyen visualizaciones de:
 * Productos con mayor aumento o baja en el período.
 
 📁 [Ver Análisis Exploratorio de Datos -EDA](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/blob/main/notebooks/01_EDA_WS.ipynb)
+
+
 📉 [Ver Modelo de Tendencias](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/blob/main/notebooks/02_modelo_tendencias_WS.ipynb)
 
 
