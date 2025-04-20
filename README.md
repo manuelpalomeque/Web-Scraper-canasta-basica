@@ -92,7 +92,7 @@ python scraper/carrefour.py
 ---
 
 ## 📊 Análisis y visualizaciones
-Los notebooks dentro de /notebooks contienen el análisis exploratorio y los modelos predictivos de tendencia de precios.
+Los notebooks dentro de [/notebooks](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/tree/main/notebooks) contienen el análisis exploratorio y los modelos predictivos de tendencia de precios.
 
 Se incluyen visualizaciones de:
 
@@ -100,7 +100,7 @@ Se incluyen visualizaciones de:
 * Comparación entre cadenas de supermercados.
 * Productos con mayor aumento o baja en el período.
 
-📁 Ver carpeta visualizaciones/ para resultados gráficos y dashboards.
+📁 [Ver Análisis Exploratorio de Datos -EDA](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/blob/main/notebooks/01_EDA_WS.ipynb)
 
 ---
 
