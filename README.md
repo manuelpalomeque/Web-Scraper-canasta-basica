@@ -61,8 +61,8 @@ Notebook: Colab
 ## 📤 Fuentes de datos
 Los datos fueron extraídos de las siguientes cadenas de supermercados:
 
-* Hiper Libertad – https://www.hiperlibertad.com.ar/
-* Disco – https://www.disco.com.ar/
+* [Hiper Libertad](https://www.hiperlibertad.com.ar/)
+* [Disco](https://www.disco.com.ar/)
 
 ⚠️ Importante: Este proyecto tiene fines educativos y no persigue fines comerciales. Se respetan los términos de uso de cada sitio web.
 
