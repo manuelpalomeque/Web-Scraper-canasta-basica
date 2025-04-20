@@ -40,8 +40,6 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 |   |── disco.ipynb 
 │   ├── 01_EDA_WS.ipynb
 │   └── 02_modelo_tendencias.ipynb
-├── visualizaciones/
-│   └── dashboard_precios.pdf
 ├── Canasta Básica Alimentaria.png
 ├── Relevamiento de productos- Enlaces usados.pdf
 ├── requirements.txt
@@ -90,11 +88,10 @@ python scraper/carrefour.py
 
 ---
 
-## 📊 Análisis y visualizaciones
+## 📊 Análisis Exploratorio de Datos -EDA
 Los notebooks dentro de [/notebooks](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/tree/main/notebooks) contienen el análisis exploratorio y los modelos predictivos de tendencia de precios.
 
 Se incluyen visualizaciones de:
-
 * Evolución de precios por producto y categoría.
 * Comparación entre cadenas de supermercados.
 * Productos con mayor aumento o baja en el período.
