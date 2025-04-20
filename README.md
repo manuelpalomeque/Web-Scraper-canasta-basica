@@ -68,6 +68,20 @@ Los datos fueron extraídos de las siguientes cadenas de supermercados:
 
 ---
 
+## 📊 Análisis Exploratorio de Datos -EDA
+Los notebooks dentro de [/notebooks](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/tree/main/notebooks) contienen el análisis exploratorio y los modelos predictivos de tendencia de precios.
+
+Se incluyen visualizaciones de:
+* Evolución de precios por producto y categoría.
+* Comparación entre cadenas de supermercados.
+* Productos con mayor aumento o baja en el período.
+
+📁 [Ver Análisis Exploratorio de Datos -EDA](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/blob/main/notebooks/01_EDA_WS.ipynb)
+
+
+
+---
+
 ## ⚙️ Instrucciones para ejecutar el scraper
 1. Clonar el repositorio:
 
@@ -85,18 +99,6 @@ pip install -r requirements.txt
 ``` bash
 python scraper/carrefour.py
 ```
-
----
-
-## 📊 Análisis Exploratorio de Datos -EDA
-Los notebooks dentro de [/notebooks](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/tree/main/notebooks) contienen el análisis exploratorio y los modelos predictivos de tendencia de precios.
-
-Se incluyen visualizaciones de:
-* Evolución de precios por producto y categoría.
-* Comparación entre cadenas de supermercados.
-* Productos con mayor aumento o baja en el período.
-
-📁 [Ver Análisis Exploratorio de Datos -EDA](https://github.com/manuelpalomeque/Web-Scraper-canasta-basica/blob/main/notebooks/01_EDA_WS.ipynb)
 
 ---
 
