@@ -34,7 +34,8 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 │   └── disco.py
 ├── data/
 │   ├── relevamiento_precios_hiper_libertad.csv
-│   └── relevamiento_precios_disco.csv
+│   ├── relevamiento_precios_disco.csv
+│   └── datos_limpios.xlsx
 ├── notebooks/
 │   ├── hiper_libertad.ipynb
 |   |── disco.ipynb 
