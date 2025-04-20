@@ -34,12 +34,11 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 │   └── disco.py
 ├── data/
 │   ├── relevamiento_precios_hiper_libertad.csv
-│   ├── relevamiento_precios_disco.csv
-│   └── precios_limpios/
+│   └── relevamiento_precios_disco.csv
 ├── notebooks/
 │   ├── hiper_libertad.ipynb
 |   |── disco.ipynb 
-│   ├── 01_eda.ipynb
+│   ├── 01_EDA_WS.ipynb
 │   └── 02_modelo_tendencias.ipynb
 ├── visualizaciones/
 │   └── dashboard_precios.pdf
