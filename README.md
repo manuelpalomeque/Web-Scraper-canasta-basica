@@ -19,9 +19,8 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 ## 📌 Objetivos del proyecto
 
 - Extraer datos de precios desde diferentes supermercados cordobeses.
-- Automatizar la recolección periódica para analizar la evolución en el tiempo.
 - Unificar y limpiar los datos para facilitar el análisis.
-- Visualizar las variaciones de precios por producto, categoría y supermercado.
+- Visualizar las variaciones de precios por producto y supermercado.
 - Identificar patrones de inflación, estabilidad o anomalías.
 
 ---
@@ -54,12 +53,11 @@ El objetivo es generar una herramienta automatizada que permita observar y visua
 
 ## 🧰 Tecnologías utilizadas
 Lenguaje: Python 3.10
+Notebook: Colab
 
 * Scraping: BeautifulSoup
-* Procesamiento de datos: pandas
-* Visualización: matplotlib
-* Automatización (a futuro): cron, Airflow o Prefect
-* Versionado de código: Git
+* Procesamiento de datos: Pandas
+* Visualización: Matplotlib  y Seaborn
 
 ---
 
